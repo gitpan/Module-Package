@@ -14,6 +14,9 @@ lib/inc/Module/Package.pod
 lib/Module/Install/Package.pm
 lib/Module/Install/Package.pod
 lib/Module/Package.pm
+lib/Module/Package.pod
+lib/Module/Package/Plugin.pm
+lib/Module/Package/Plugin.pod
 Makefile.PL
 MANIFEST			This list of files
 META.yml

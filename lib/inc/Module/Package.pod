@@ -2,19 +2,19 @@
 
 =head1 NAME
 
-inc::Package - inc::Module::Install on Kool-aid. Oh Yeah!
+inc::Module::Package - Module::Package Bootstrapper
 
 =head1 SYNOPSIS
 
 In you C<Makefile.PL>:
 
-    use inc::Package;
+    use inc::Module::Package <options>;
 
 =head1 DESCRIPTION
 
-This is the inc::Module::Package bootstrapping module.
-It works something like inc::Module::Install.
-This code should only be loaded in an author environment.
+This is the L<Module::Package> bootstrapping module.  It works something like
+L<inc::Module::Install>.  This bootstrap module should only be loaded in an
+author environment.
 
 See L<Module::Package> for more information.
 

@@ -1,0 +1,85 @@
+=encoding utf8
+
+=head1 NAME
+
+Module::Package::Plugin - Base class for Module::Package author-side plugins
+
+=head1 SYNOPSIS
+
+    package Module::Package::Name;
+
+    package Module::Package::Name::flavor;
+    use Moo;
+    extends 'Module::Package::Plugin';
+
+    sub main {
+        my ($self) = @_;
+        $self->mi->some_module_install_author_plugin;
+        $self->mi->other_author_plugin;
+        $self->all_from;
+    }
+
+    1;
+
+=head1 DESCRIPTION
+
+This module is the base class for Module::Package plugins. 
+
+... much more doc coming soon...
+
+For now take a look at the L<Module::Package::Ingy> module.
+
+=head1 OPTIONS
+
+The following options are available for use from the Makefile.PL:
+
+    use Module::Package 'Foo:bar',
+        deps_list => 0,
+        install_bin => 0,
+        manifest_skip => 0;
+
+These options can be used by any subclass of this module.
+
+=head2 deps_list
+
+Default is 1.
+
+This option tells Module::Package to generate a C<author_requires> deps list,
+when you run the Makefile.PL. This list will go in the file
+C<pkg/deps_list.pl> if that exists, or after a '__END__' statement in your
+Makefile.PL. If neither is available, a reminder will be warned (only when the
+author runs it).
+
+This list is important if you want people to be able to collaborate on your
+modules easily.
+
+=head2 install_bin
+
+Default is 1.
+
+All files in a C<bin/> directory will be installed. It will call the
+C<install_script> plugin for you. Set this option to 0 to disable it.
+
+=head2 manifest_skip
+
+Default is 1.
+
+This option will generate a sane MANIFEST.SKIP for you and delete it again
+when you run C<make clean>. You can add your own skips in the file called
+C<pkg/manifest.skip>. You almost certainly want this option on. Set to 0 if
+you are weird.
+
+=head1 AUTHOR
+
+Ingy döt Net <ingy@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (c) 2011. Ingy döt Net.
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
+See http://www.perl.com/perl/misc/Artistic.html
+
+=cut

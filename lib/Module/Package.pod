@@ -1,33 +1,8 @@
-##
-# name:      Module::Package
-# abstract:  Postmodern Perl Module Packaging
-# author:    Ingy döt Net <ingy@cpan.org>
-# license:   perl
-# copyright: 2011
+=encoding utf8
 
-package Module::Package;
-use 5.005;
-use strict;
+=head1 NAME
 
-$Module::Package::VERSION = '0.12';
-
-sub import {
-    eval "use inc::Module::Install 1.01 (); 1" or die $@;
-
-    my $class = shift;
-    package main;
-    inc::Module::Install->import();
-    eval {
-        module_package_internals_version_check($Module::Package::VERSION);
-        module_package_internals_init(@_);
-    };
-    if ($@) {
-        $Module::Package::ERROR = $@;
-        die $@;
-    }
-}
-
-1;
+Module::Package - Postmodern Perl Module Packaging
 
 =head1 SYNOPSIS
 
@@ -181,3 +156,18 @@ to also pass it options.
 
 This is still an early release. You should probably avoid it for now. That
 said, quite a few modules are using this in the wild. Caveat author.
+
+=head1 AUTHOR
+
+Ingy döt Net <ingy@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (c) 2011. Ingy döt Net.
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
+See http://www.perl.com/perl/misc/Artistic.html
+
+=cut
