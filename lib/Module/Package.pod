@@ -157,6 +157,24 @@ to also pass it options.
 This is still an early release. You should probably avoid it for now. That
 said, quite a few modules are using this in the wild. Caveat author.
 
+=head1 SEE ALSO
+
+=over
+
+=item *
+
+L<Module::Package::Plugin>
+
+=item *
+
+L<Module::Install::Package>
+
+=item *
+
+L<Module::Package::Tutorial>
+
+=back
+
 =head1 AUTHOR
 
 Ingy döt Net <ingy@cpan.org>
