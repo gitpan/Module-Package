@@ -12,6 +12,16 @@ Module::Install::Package - Module::Install support for Module::Package
 
 This Module::Install plugin provides user-side support for L<Module::Package>.
 
+=head1 SEE ALSO
+
+=over
+
+=item *
+
+L<Module::Package>
+
+=back
+
 =head1 AUTHOR
 
 Ingy döt Net <ingy@cpan.org>

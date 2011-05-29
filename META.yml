@@ -21,10 +21,11 @@ no_index:
 requires:
   File::Find: 0
   IO::All: 0.41
+  Module::Install: 1.01
   Module::Install::AuthorRequires: 0.02
   Module::Install::ManifestSkip: 0.15
   Moo: 0.009007
   perl: 5.8.3
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.15
+version: 0.16
