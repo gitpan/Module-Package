@@ -24,9 +24,9 @@ requires:
   IO::All: 0.41
   Module::Install: 1.01
   Module::Install::AuthorRequires: 0.02
-  Module::Install::ManifestSkip: 0.17
-  Moo: 0.009007
+  Module::Install::ManifestSkip: 0.19
+  Moo: 0.009008
   perl: 5.8.3
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.19
+version: 0.20

@@ -71,6 +71,7 @@ The following options are available for use from the Makefile.PL:
     use Module::Package 'Foo:bar',
         deps_list => 0|1,
         install_bin => 0|1,
+        install_share => 0|1,
         manifest_skip => 0|1,
         requires_from => 0|1;
 
@@ -95,6 +96,13 @@ Default is 1.
 
 All files in a C<bin/> directory will be installed. It will call the
 C<install_script> plugin for you. Set this option to 0 to disable it.
+
+=head2 install_share
+
+Default is 1.
+
+All files in a C<share/> directory will be installed. It will call the
+C<install_share> plugin for you. Set this option to 0 to disable it.
 
 =head2 manifest_skip
 
