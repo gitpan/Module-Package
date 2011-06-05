@@ -16,7 +16,7 @@ use strict;
 use Module::Install::Base;
 use vars qw'@ISA $VERSION';
 @ISA = 'Module::Install::Base';
-$VERSION = '0.20';
+$VERSION = '0.21';
 
 #-----------------------------------------------------------------------------#
 # XXX BOOTBUGHACK
@@ -244,7 +244,7 @@ sub guess_pm {
     }, 'lib');
     $self->set($pm);
 }
-$main::PM = bless [], __PACKAGE__;
+$main::PM = bless [$main::PM ? ($main::PM) : ()], __PACKAGE__;
 
 package Module::Package::POD;
 use overload '""' => sub {
@@ -253,7 +253,7 @@ use overload '""' => sub {
     return -e $pod ? $pod : '';
 };
 sub set { $_[0][0] = $_[1] }
-$main::POD = bless [], __PACKAGE__;
+$main::POD = bless [$main::POD ? ($main::POD) : ()], __PACKAGE__;
 
 1;
 
