@@ -28,6 +28,7 @@ requires:
   Moo: 0.009008
   perl: 5.8.3
 resources:
+  homepage: http://github.com/ingydotnet/module-package-pm/tree
   license: http://dev.perl.org/licenses/
   repository: git://github.com/ingydotnet/module-package-pm.git
-version: 0.22
+version: 0.23
