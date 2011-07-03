@@ -20,6 +20,7 @@ no_index:
     - t
     - xt
 requires:
+  Cwd: 0
   File::Find: 0
   IO::All: 0.41
   Module::Install: 1.01
@@ -31,4 +32,4 @@ resources:
   homepage: http://github.com/ingydotnet/module-package-pm/tree
   license: http://dev.perl.org/licenses/
   repository: git://github.com/ingydotnet/module-package-pm.git
-version: 0.25
+version: 0.26
