@@ -1,4 +1,9 @@
 ---
+version: 0.30
+date:    Thu Oct  6 10:37:01 EDT 2011
+changes:
+- Patch from tobyink++ to support user side plugins
+---
 version: 0.29
 date:    Sun Sep 25 22:21:20 CEST 2011
 changes:
